@@ -12,10 +12,10 @@
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
     /* Background */
-    --home-bg-gradient: linear-gradient(180deg, rgba(5,10,19,1) 0%, rgba(24,53,107,1) 100%);
+    /* --home-bg-gradient: linear-gradient(180deg, rgba(5,10,19,1) 0%, rgba(24,53,107,1) 100%); */
 
     /* Size */
-    --size-max-width: 1200px
+    --size-max-width: 1200px;
 
     /* Divider */
     --divider-single-wave: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path> </svg>');
@@ -32,7 +32,7 @@ html{
 }
 
 body{
-    font-family: 'Rubik',sans-serif;
+    font-family: 'Rubik','Orbit', sans-serif;
     margin: 0;
 }
 
@@ -92,6 +92,9 @@ button:focus{
     align-items: center;
     z-index: 1;
     transition: all 300ms ease;
+    overflow-x: hidden; /* 가로 스크롤 막기 */
+
+    
 }
 
 .header--dark{
@@ -160,7 +163,7 @@ button:focus{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: calc(105% + 1.3px);
+    width: 100%;
     height: 76px;
     overflow: hidden;
     line-height: 0;
@@ -243,6 +246,10 @@ button:focus{
 
 .jobs{
     text-align: start;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 2.5rem 0;
 }
 
 .job{
@@ -273,7 +280,7 @@ button:focus{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: calc(142% + 1.3px);
+    width: 100%;
     height: 76px;
     overflow: hidden;
     line-height: 0;
@@ -486,6 +493,7 @@ button:focus{
     height: 4.5rem;
     border-radius: 100%;
     text-align: center;
+    z-index: 1;
     box-shadow: 5px 5px 0px 0px var(--color-accent);
     transition: opacity 300ms ease-in;
 
@@ -503,7 +511,7 @@ button:focus{
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% + 1.3px);
+    width: 100%;
     height: 76px;
     overflow: hidden;
     line-height: 0;
