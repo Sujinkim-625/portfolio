@@ -92,8 +92,6 @@ button:focus{
     align-items: center;
     z-index: 1;
     transition: all 300ms ease;
-    overflow-x: hidden; /* 가로 스크롤 막기 */
-
     
 }
 
